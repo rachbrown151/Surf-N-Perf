@@ -1,3 +1,20 @@
 language: node_js
 node_js:
   - "0.10"
+after_success:
+  - git checkout master
+  - grunt jsdoc
+  - git add -A
+  - git stash
+  - git branch -d gh-pages
+  - git checkout -b gh-pages origin/gh-pages
+  - git stash apply
+  - cp -r gh-pages/* .
+  - rm -r gh-pages/
+  - rm index.html
+  - mv SurfNPerf.html index.html
+  - git add -A
+  - git commit -m "Automated documentation update"
+  - git push origin gh-pages
+  - git checkout master
+  - git branch -d gh-pages
