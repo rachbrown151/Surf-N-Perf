@@ -11,7 +11,8 @@ after_success:
   - grunt jsdoc
   - git add -A
   - git stash
-  - git checkout -b gh-pages origin/gh-pages
+  - git pull origin/gh-pages gh-pages
+  - git branch
   - git stash apply
   - cp -r gh-pages/* .
   - rm -r gh-pages/
