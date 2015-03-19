@@ -8,12 +8,15 @@ branches:
 before_install: npm install -g grunt-cli
 install: npm install
 after_success:
+  - git remote set-url origin https://github.com/rachbrown151/Surf-N-Perf.git
   - grunt jsdoc
   - git add -A
   - git stash
-  - git pull origin/gh-pages gh-pages
-  - git branch
+  - git checkout -b gh-pages
+  - rm -r .
+  - ls
   - git stash apply
+  - ls
   - cp -r gh-pages/* .
   - rm -r gh-pages/
   - rm index.html
