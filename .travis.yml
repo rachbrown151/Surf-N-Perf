@@ -25,3 +25,4 @@ after_success:
   - git commit -m "Automated documentation update"
   - git push origin gh-pages
   - git checkout master
+  - git branch -d gh-pages
