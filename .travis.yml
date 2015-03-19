@@ -13,7 +13,7 @@ after_success:
   - git add -A
   - git stash
   - git checkout -b gh-pages
-  - rm -r .
+  - rm -r *
   - ls
   - git stash apply
   - ls
