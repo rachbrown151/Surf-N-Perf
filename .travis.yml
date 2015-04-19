@@ -4,7 +4,7 @@ node_js:
 env:
   global:
   - GH_REF https://github.com/rachbrown151/Surf-N-Perf.git
-  - secure: 026629c44d1035eb2d60c9a9215e7ae9a622dda6
+  - secure: 554540062d6e04e9100d1989c0e1def530023622
 branches:
   only:
   - master
@@ -13,11 +13,11 @@ before_install: npm install -g grunt-cli
 install: 
   - npm install
   - npm install travis-encrypt -g
-  - travis-encrypt -r https://github.com/rachbrown151/Surf-N-Perf.git -k GH_TOKEN -v 026629c44d1035eb2d60c9a9215e7ae9a622dda6
+  - travis-encrypt -r https://github.com/rachbrown151/Surf-N-Perf.git -k GH_TOKEN -v 554540062d6e04e9100d1989c0e1def530023622
 after_success:
   - git remote set-url origin https://github.com/rachbrown151/Surf-N-Perf.git
-  - git config --global user.email "shayanp@seas.upenn.edu"
-  - git config --global user.name "Shayan Patel"
+  - git config --global user.email "rabrown@seas.upenn.edu"
+  - git config --global user.name "Rachel Brown"
   - grunt jsdoc
   - git add -A
   - git status
