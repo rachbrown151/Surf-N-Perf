@@ -13,7 +13,7 @@ before_install: npm install -g grunt-cli
 install:
   - npm install
 after_success:
-  - git remote set-url origin "https://github.com/rachbrown151/Surf-N-Perf.git"
+  - git remote set-url origin "github.com/rachbrown151/Surf-N-Perf.git"
   - git config --global user.email "rabrown@seas.upenn.edu"
   - git config --global user.name "Rachel Brown"
   - grunt jsdoc
