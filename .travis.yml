@@ -3,8 +3,8 @@ node_js:
   - "0.10"
 env:
   global:
-    - GH_REF https://github.com/rachbrown151/Surf-N-Perf
-    - secure: "lDcNE9r8busJxdPLOWCDVZbwLP7JVEAGJkJf8WTxDn7d3M/MVXsAoCifPzZLFp0GOUA9HBEoYX0QVQGc3VxHC4m8CjQczMnABuwI+zozCyif8Ql9OWKc7msWGxfj+LG8WWR9C+P6I5oRwF0cx5eYBMj4IUsYPivCMy5wJqsi8ug="
+    - "GH_REF https://github.com/rachbrown151/Surf-N-Perf"
+    - secure: "gfPoLSAj3+kYluRzuwPtrik93SXL1Pefq4PR9odncqkgd5hA8vpMP9gqwIyyM1LubBctbbFxMO8Zt8jFGGpZCqMp57LZSkWj5nayk0SUn3YtBoXTsLXAy+WLEUr8qXRtxFhXCJIwhYuhMucZAowoaAaZmnLcRcRJj1MSCQA5Yzw="
 branches:
   only:
     - master
@@ -14,8 +14,8 @@ install:
   - npm install
 after_success:
   - "git remote set-url origin https://github.com/rachbrown151/Surf-N-Perf.git"
-  - "git config --global user.email \"rabrown@seas.upenn.edu\""
-  - "git config --global user.name \"Rachel Brown\""
+  - "git config --global user.email "rabrown@seas.upenn.edu"
+  - "git config --global user.name "Rachel Brown"
   - grunt jsdoc
   - git add -A
   - git status
@@ -31,7 +31,7 @@ after_success:
   - rm index.html
   - mv SurfNPerf.html index.html
   - git add -A
-  - "git commit -m \"Automated documentation update\""
-  - git push origin gh-pages
+  - "git commit -m "Automated documentation update"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
   - git checkout master
   - git branch -d gh-pages
