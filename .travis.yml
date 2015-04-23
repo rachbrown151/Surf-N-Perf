@@ -24,7 +24,7 @@ after_success:
   - ls
   - mkdir save
   - mv demo.html save/demo.html
-  - "rm -r *.html"
+  - "rm -r .*.html"
   - ls
   - git stash apply
   - ls
