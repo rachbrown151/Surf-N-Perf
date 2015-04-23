@@ -31,8 +31,8 @@ after_success:
   - rm index.html
   - mv SurfNPerf.html index.html
   - git checkout gh-pages
-  - git checkout origin
-  - git merge "https://${GH_TOKEN}:@${GH_REF}" origin/gh-pages
+  - git checkout master
+  - git merge "https://${GH_TOKEN}:@${GH_REF}" master gh-pages
   - git add -A
   - git commit -m "Automated documentation update"
   - git push "https://${GH_TOKEN}:@${GH_REF}" master:gh-pages
