@@ -35,6 +35,6 @@ after_success:
   - git merge "https://${GH_TOKEN}:@${GH_REF}" master gh-pages
   - git add -A
   - git commit -m "Automated documentation update"
-  - git push "https://${GH_TOKEN}:@${GH_REF}" master:gh-pages
+  - git push "https://${GH_TOKEN}:@${GH_REF}" master:gh-pages --force
   - git checkout master
   - git branch -d gh-pages
