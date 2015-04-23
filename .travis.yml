@@ -27,6 +27,7 @@ after_success:
   - git stash apply
   - ls
   - "cp -r gh-pages/* ."
+  - mv -r gh-pages/scripts/bootstrap.min.css scripts/bootstrap.min.css
   - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
