@@ -22,7 +22,7 @@ after_success:
   - git stash
   - git checkout -b gh-pages
   - ls
-  - "rm -r *.html"
+  - "rm *.html"
   - ls
   - git stash apply
   - ls
