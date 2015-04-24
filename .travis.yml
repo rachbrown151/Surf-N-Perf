@@ -16,6 +16,7 @@ after_success:
   - git remote set-url origin "github.com/rachbrown151/Surf-N-Perf.git"
   - git config --global user.email "rabrown@seas.upenn.edu"
   - git config --global user.name "Rachel Brown"
+  - mv scripts/bootstrap.min.css bootstrap.min.css
   - grunt jsdoc
   - git add -A
   - git status
@@ -25,7 +26,6 @@ after_success:
   - ls
   - git stash apply
   - ls
-  - mv scripts/bootstrap.min.css bootstrap.min.css
   - "cp -r gh-pages/* ."
   - rm -r gh-pages/
   - rm index.html
