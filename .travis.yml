@@ -24,6 +24,8 @@ after_success:
   - ls
   - "rm -r *"
   - ls
+  - mkdir docs
+  - cd docs
   - git stash apply
   - ls
   - "cp -r gh-pages/* ."

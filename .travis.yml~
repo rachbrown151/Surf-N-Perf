@@ -20,7 +20,7 @@ after_success:
   - git add -A
   - git status
   - git stash
-  - git checkout gh-pages
+  - git checkout -b gh-pages
   - ls
   - "rm -r *"
   - ls
