@@ -24,7 +24,7 @@ after_success:
   - ls
   - mkdir docs
   - "cp -r . docs/*
-  - cd ..
+  - ls
   - mkdir demo
   - mv docs/demo.html demo/demo.html
   - "rm -r *"
