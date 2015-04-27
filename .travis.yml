@@ -22,12 +22,12 @@ after_success:
   - git stash
   - git checkout -b gh-pages
   - ls
+  - mkdir demo
+  - mv demo.html demo/demo.html
   - "rm *"
   - ls
   - git stash apply
   - ls
-  - "cp -r gh-pages/* ."
-  - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
   - git checkout gh-pages
