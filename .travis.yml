@@ -16,13 +16,13 @@ after_success:
   - git remote set-url origin "github.com/rachbrown151/Surf-N-Perf.git"
   - git config --global user.email "rabrown@seas.upenn.edu"
   - git config --global user.name "Rachel Brown"
-  - mv scripts/bootstrap.min.css bootstrap.min.css
   - grunt jsdoc
   - git add -A
   - git status
   - git stash
   - git checkout -b gh-pages
   - ls
+  - "rm -r *"
   - ls
   - git stash apply
   - ls
@@ -30,7 +30,6 @@ after_success:
   - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
-  - mv bootstrap.min.css scripts/bootstrap.min.css
   - git checkout gh-pages
   - git checkout master
   - git merge "https://${GH_TOKEN}:@${GH_REF}" master gh-pages
