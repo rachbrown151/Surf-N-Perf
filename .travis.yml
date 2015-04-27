@@ -29,7 +29,6 @@ after_success:
   - git stash apply
   - ls
   - "cp -r gh-pages/* ."
-  - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
   - git checkout gh-pages
