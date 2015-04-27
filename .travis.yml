@@ -22,8 +22,6 @@ after_success:
   - git stash
   - git checkout -b gh-pages
   - ls
-  - mkdir demo
-  - mv demo.html demo/demo.html
   - "rm *"
   - ls
   - git stash apply
