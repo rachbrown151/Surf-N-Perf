@@ -16,19 +16,17 @@ after_success:
   - git remote set-url origin "github.com/rachbrown151/Surf-N-Perf.git"
   - git config --global user.email "rabrown@seas.upenn.edu"
   - git config --global user.name "Rachel Brown"
-  - mkdir save
-  - mv demo.html save/demo.html
   - grunt jsdoc
   - git add -A
   - git status
   - git stash
   - git checkout -b gh-pages
   - ls
-  - mv save/demo.html demo.html
+  - "rm -r *"
   - ls
   - git stash apply
   - ls
-  - "cp -r gh-pages/* ."
+  - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
   - git checkout gh-pages
