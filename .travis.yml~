@@ -23,8 +23,8 @@ after_success:
   - git checkout -b gh-pages
   - ls
   - mkdir docs
-  - 
-  - cd..
+  - "cp -r . docs/*
+  - "cd .."
   - mkdir demo
   - mv docs/demo.html demo/demo.html
   - "rm -r *"
