@@ -26,9 +26,6 @@ after_success:
   - mv demo.html demo/demo.html
   - mkdir demo-scripts
   - "rm *"
-  - rm -rf spec
-  - rm -rf doc
-  - rm -rf jaguarjs-jsdoc
   - rm Gruntfile.js
   - rm npm-debug.log
   - ls
