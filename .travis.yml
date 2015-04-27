@@ -24,7 +24,13 @@ after_success:
   - ls
   - mkdir demo
   - mv demo.html demo/demo.html
+  - mv scripts/bootstrap.min.css demo/bootstrap.min.css
   - "rm *"
+  - rmdir spec
+  - rmdir doc
+  - rmdir jaguarjs-jsdoc
+  - rm Gruntfile.js
+  - rm npm-debug.log
   - ls
   - git stash apply
   - ls
@@ -32,6 +38,7 @@ after_success:
   - rm -r gh-pages/
   - rm index.html
   - mv SurfNPerf.html index.html
+  - mv demo/bootstrap.min.css scripts/bootstrap.min.css
   - mv demo/demo.html demo.html
   - git checkout gh-pages
   - git checkout master
