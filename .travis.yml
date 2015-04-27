@@ -22,6 +22,11 @@ after_success:
   - git stash
   - git checkout -b gh-pages
   - ls
+  - mkdir docs
+  - "cp -r . docs/*
+  - "cd .."
+  - mkdir demo
+  - mv docs/demo.html demo/demo.html
   - "rm -r *"
   - ls
   - git stash apply
