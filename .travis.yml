@@ -24,7 +24,8 @@ after_success:
   - ls
   - ls
   - mkdir demo
-  - mv docs/demo.html demo/demo.html
+  - mv demo.html demo/demo.html
+  - "rm *"
   - ls
   - git stash apply
   - rm index.html
