@@ -24,7 +24,6 @@ after_success:
   - ls
   - mkdir demo
   - mv demo.html demo/demo.html
-  - mkdir demo-scripts
   - "rm *"
   - rm Gruntfile.js
   - rm npm-debug.log

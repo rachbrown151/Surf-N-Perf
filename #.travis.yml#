@@ -22,7 +22,7 @@ after_success:
   - git stash
   - git checkout -b gh-pages
   - ls
-  - mkdir demo
+  - mk
   - mv demo.html demo/demo.html
   - mkdir demo-scripts
   - "rm *"
