@@ -29,8 +29,9 @@ after_success:
   - mv public/surfnperf.html demo/public/surfnperf.html
   - mv public/nv.d3.js demo/public/nv.d3.js
   - mv public/nv.d3.css demo/public/nv.d3.css
-  - ls
-  - ls demo
+  - ls -la
+  - ls -la demo
+  - ls -la demo/public
   - "rm *"
   - ls
   - rm Gruntfile.js
