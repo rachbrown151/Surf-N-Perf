@@ -23,6 +23,7 @@ after_success:
   - git checkout -b gh-pages
   - ls
   - mkdir demo
+  - mkdir demo/public
   - mv demo.html demo/demo.html
   - mv visualize.html demo/visualize.html
   - mv public/surfnperf.html demo/public/surfnperf.html
