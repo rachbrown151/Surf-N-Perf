@@ -29,7 +29,10 @@ after_success:
   - mv public/surfnperf.html demo/public/surfnperf.html
   - mv public/nv.d3.js demo/public/nv.d3.js
   - mv public/nv.d3.css demo/public/nv.d3.css
+  - ls
+  - ls demo
   - "rm *"
+  - ls
   - rm Gruntfile.js
   - rm npm-debug.log
   - ls
@@ -44,7 +47,9 @@ after_success:
   - mv demo/visualize.html visualize.html 
   - mv demo/public/surfnperf.html public/surfnperf.html 
   - mv demo/public/nv.d3.js public/nv.d3.js 
-  - mv demo/public/nv.d3.css public/nv.d3.css
+  - mv demo/public/nv.d3.css public/nv.d3.cssg
+  - ls
+  - ls public
   - git checkout gh-pages
   - git checkout master
   - git merge "https://${GH_TOKEN}:@${GH_REF}" master gh-pages
@@ -52,4 +57,4 @@ after_success:
   - git commit -m "Automated documentation update"
   - git push "https://${GH_TOKEN}:@${GH_REF}" master:gh-pages --force
   - git checkout master
-  - git branch -d gh-pages
+  - git branch -d gh-pagesg
