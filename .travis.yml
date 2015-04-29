@@ -23,10 +23,11 @@ after_success:
   - git checkout -b gh-pages
   - ls
   - mkdir demo
-  - mkdir visualize
   - mv demo.html demo/demo.html
-  - mv visualize.html visualize/
-  - mv public/* visualize/
+  - mv visualize.html demo/visualize.html
+  - mv public/surfnperf.html demo/public/surfnperf.html
+  - mv public/nv.d3.js demo/public/nv.d3.js
+  - mv public/nv.d3.css demo/public/nv.d3.css
   - "rm *"
   - rm Gruntfile.js
   - rm npm-debug.log
@@ -36,9 +37,13 @@ after_success:
   - "cp -r gh-pages/* ."
   - rm -r gh-pages/
   - rm index.html
+  - mkdir public
   - mv SurfNPerf.html index.html
   - mv demo/demo.html demo.html
-  - mv visualize/* .
+  - mv demo/visualize.html visualize.html 
+  - mv demo/public/surfnperf.html public/surfnperf.html 
+  - mv demo/public/nv.d3.js public/nv.d3.js 
+  - mv demo/public/nv.d3.css public/nv.d3.css
   - git checkout gh-pages
   - git checkout master
   - git merge "https://${GH_TOKEN}:@${GH_REF}" master gh-pages
