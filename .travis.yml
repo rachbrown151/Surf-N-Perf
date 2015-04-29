@@ -47,8 +47,8 @@ after_success:
   - mv demo/demo.html demo.html
   - mv demo/visualize.html visualize.html 
   - mv demo/public/surfnperf.html public/surfnperf.html 
-  - mv demo/public/nv.d3.js public/nv.d3.js 
-  - mv demo/public/nv.d3.css public/nv.d3.cssg
+  - mv demo/public/nv.d3.js public/nv.d3.js
+  - mv demo/public/nv.d3.css public/nv.d3.css
   - ls
   - ls public
   - git checkout gh-pages
