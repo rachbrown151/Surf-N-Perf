@@ -29,6 +29,7 @@ after_success:
   - mv public/surfnperf.html demo/public/surfnperf.html
   - mv public/nv.d3.js demo/public/nv.d3.js
   - mv public/nv.d3.css demo/public/nv.d3.css
+  - mv public/bootstrap.min.css demo/public/bootstrap.min.css
   - ls -la
   - ls -la demo
   - ls -la demo/public
@@ -49,6 +50,7 @@ after_success:
   - mv demo/public/surfnperf.html public/surfnperf.html 
   - mv demo/public/nv.d3.js public/nv.d3.js
   - mv demo/public/nv.d3.css public/nv.d3.css
+  - mv demo/public/bootstrap.min.css public/bootstrap.min.css
   - ls
   - ls public
   - git checkout gh-pages
