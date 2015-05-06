@@ -38,10 +38,13 @@ module.exports = function(grunt) {
     },
     jsdoc: {
       dist: {
-        src: ['surfnperf.js'],
+        src: ['./*.js', './README.md'],
         options: {
-          destination: 'doc'
-        }
+            destination: './gh-pages',
+            configure: './jaguarjs-jsdoc/conf.json',
+            template: './jaguarjs-jsdoc',
+            'private': false
+          }
       }
     },
     watch: {
