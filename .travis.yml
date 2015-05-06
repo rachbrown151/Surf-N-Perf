@@ -24,7 +24,6 @@ after_success:
   - ls
   - mkdir demo
   - mkdir demo/public
-  - cp SurfNPerf.html index.html
   - mv demo.html demo/demo.html
   - mv visualize.html demo/visualize.html
   - mv public/surfnperf.html demo/public/surfnperf.html
@@ -45,6 +44,7 @@ after_success:
   - rm -r gh-pages/
   - rm index.html
   - mkdir public
+  - cp SurfNPerf.html index.html
   - mv demo/demo.html demo.html
   - mv demo/visualize.html visualize.html 
   - mv demo/public/surfnperf.html public/surfnperf.html 
