@@ -44,7 +44,6 @@ after_success:
   - rm -r gh-pages/
   - rm index.html
   - mkdir public
-  - mv SurfNPerf.html index.html
   - mv demo/demo.html demo.html
   - mv demo/visualize.html visualize.html 
   - mv demo/public/surfnperf.html public/surfnperf.html 
